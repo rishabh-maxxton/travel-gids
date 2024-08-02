@@ -1,0 +1,125 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+    <img routerLink="home" src="asset/images/Logo2.png" class="logo" alt="Site Logo"/>
+
+    <!-- Navbar Toggler for Mobile View -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Your existing navbar items here -->
+        <li class="nav-item">
+          <a routerLink="home" class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <a  class="nav-link active dropdown-toggle" data-bs-auto-close='outside' href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mood </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" data-bs-auto-close='outside' data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solo Travelling</a>
+                <ul class="dropdown-menu">
+                  <li><a routerLink="mountains" class="dropdown-item" href="#">Mountains</a></li>
+                  <li><a routerLink="beach" class="dropdown-item" href="#">Beach</a></li>
+                  <li><a routerLink="waterfall" class="dropdown-item" href="#">Waterfall</a></li>
+                </ul>
+              </li>
+              <li class="dropdown dropend">
+                <a class="dropdown-item dropdown-toggle" href="#" data-bs-auto-close='outside' data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cultural Tourism</a>
+                <ul class="dropdown-menu">
+                  <li><a routerLink="taj-mahal" class="dropdown-item" href="#">Taj Mahal</a></li>
+                  <li><a routerLink="khajuraho" class="dropdown-item" href="#">Khajuraho</a></li>
+                  <li><a routerLink="chittorgarh-fort" class="dropdown-item" href="#">Chittorgarh Fort</a></li>
+                  <li><a routerLink="jantar-mantar" class="dropdown-item" href="#">Jantar Mantar - Jaipur</a></li>
+                </ul>
+              </li>
+              <li><a routerLink="adventure-tourism" class="dropdown-item" href="#">Adventure Tourism</a></li>
+              <li><a routerLink="luxury-tourism" class="dropdown-item" href="#">Luxury Tourism</a></li>
+              <li><a routerLink="backpacking-tourism" class="dropdown-item" href="#">Backpacking Tourism</a></li>
+              <li><a routerLink="budget-tourism" class="dropdown-item" href="#">Budget Tourism</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a routerLink="blog-page" class="nav-link active" aria-current="page" href="#">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="../about" class="nav-link active" aria-current="page" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="contact" class="nav-link active" aria-current="page" href="#">Contact Us</a>
+        </li>
+      </ul>
+      
+      <!-- Profile Logo Dropdown -->
+      <div class="d-flex align-items-center">
+        <div class="dropdown profile-dropdown">
+          <img src="asset/images/profile.jpg" class="profile-logo" (click)="toggleDropdown()" alt="Profile Logo">
+          <ul class="dropdown-menu profile-dropdown-menu" *ngIf="dropdownVisible">
+            <li><a routerLink="login" class="dropdown-item" href="#">Login</a></li>
+            <li><a routerLink="register" class="dropdown-item" href="#">Signup</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+    <img src="asset/images/logo-color.jpg" class="logo"/>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a routerLink="home" class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <a class="nav-link active dropdown-toggle" data-bs-auto-close='outside' href="#" 
+            role="button" data-bs-toggle="dropdown" aria-expanded="false"> Places </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown dropend">
+                  <a class="dropdown-item dropdown-toggle" href="#"
+                  data-bs-auto-close='outside'
+                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MERN</a>
+                  <ul class="dropdown-menu">
+                      <li><a routerLink="mongodb" class="dropdown-item" href="#">MongoDB</a></li>
+                      <li><a routerLink="express" class="dropdown-item" href="#">Express</a></li>
+                      <li><a routerLink="react" class="dropdown-item" href="#">React</a></li>
+                      <li><a routerLink="node" class="dropdown-item" href="#">Node</a></li>
+                  </ul>
+              </li>
+                <li class="dropdown dropend">
+                    
+                    <a class="dropdown-item dropdown-toggle" href="#"
+                    data-bs-auto-close='outside'
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MEAN</a>
+                    <ul class="dropdown-menu">
+                      <li><a routerLink="mongodb" class="dropdown-item" href="#">MongoDB</a></li>
+                      <li><a routerLink="express" class="dropdown-item" href="#">Express</a></li>
+                      <li><a routerLink="angular" class="dropdown-item" href="#">Angular</a></li>
+                      <li><a routerLink="node" class="dropdown-item" href="#">Node</a></li>
+                  </ul>
+                </li>
+                <li><a routerLink="genAI" class="dropdown-item" href="#">Gen AI</a></li>
+            </ul>
+        </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="contact" class="nav-link active" aria-current="page" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ -->

@@ -1,0 +1,132 @@
+<div class="container">
+  <div class="jumbotron text-center bg-light py-5 mb-4">
+    <h1 class="display-4">Top Destinations</h1>
+    <p class="lead">Planning for a trip? We will organize your trip with the best places and within the best budget!</p>
+  </div>
+</div>
+
+<div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div *ngFor="let chunk of getChunks(top, 3); let i = index" [class.active]="i === 0" class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4" *ngFor="let card of chunk">
+            <div class="card">
+              <img [src]="card.image" class="card-img-top" [alt]="card.name">
+              <div class="card-body">
+                <h5 class="card-title">{{ card.name }}</h5>
+                <p class="card-text">{{ card.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+<!-- 
+<div class="container">
+      <div class="jumbotron text-center bg-light py-5 mb-4">
+        <h1 class="display-4">Top Destination</h1>
+        <p class="lead">Planning for a trip? We will organize your trip with the best places and within the best budget!</p>
+      </div>
+</div>
+
+<div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="asset/images/Img1.jpg" class="card-img-top" alt="Card image 1">
+              <div class="card-body">
+                <h5 class="card-title">Card Title 1</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="asset/images/Img1.jpg" class="card-img-top" alt="Card image 2">
+              <div class="card-body">
+                <h5 class="card-title">Card Title 2</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="asset/images/Img1.jpg" class="card-img-top" alt="Card image 3">
+              <div class="card-body">
+                <h5 class="card-title">Card Title 3</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div  class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="asset/images/Img1.jpg" class="card-img-top" alt="Card image 4">
+              <div class="card-body">
+                <h5 class="card-title">Card Title 4</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="asset/images/Img1.jpg" class="card-img-top" alt="Card image 5">
+              <div class="card-body">
+                <h5 class="card-title">Card Title 5</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="asset/images/Img1.jpg" class="card-img-top" alt="Card image 6">
+              <div class="card-body">
+                <h5 class="card-title">Card Title 6</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+ -->

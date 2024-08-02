@@ -1,0 +1,54 @@
+<div class="form-container">
+    <h1>Login</h1>
+    <form #f="ngForm" novalidate (ngSubmit)="login(f.value, f.form.valid)">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          [(ngModel)]="user.email"
+          class="form-control"
+          id="email"
+          placeholder="example@gmail.com"
+          name="email"
+          #email="ngModel"
+          required
+        />
+        <small [hidden]="email.valid || (email.pristine && !f.submitted)">
+          Email is required and must be a valid email address.
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          [(ngModel)]="user.password"
+          class="form-control"
+          id="password"
+          placeholder="Password"
+          name="password"
+          #password="ngModel"
+          required
+        />
+        <small [hidden]="password.valid || (password.pristine && !f.submitted)">
+          Password is required.
+        </small>
+      </div>
+      <div class="form-group form-options">
+        <label>
+          <input
+            type="checkbox"
+            [(ngModel)]="user.rememberMe"
+            name="rememberMe"
+            class="checkbox"
+          />
+          Remember Me
+        </label>
+        <a href="#" class="forgot-password">Forget Password?</a>
+      </div>
+      <button class="btn btn-success" type="submit">Login</button>
+      <div class="sign-up" routerLink="register">
+        <p>Don't have an account? <a routerLink="../register" href="#">Sign Up</a></p>
+      </div>
+    </form>
+  </div>
+  

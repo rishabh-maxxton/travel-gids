@@ -1,0 +1,33 @@
+
+  
+  <div class="container ">
+    <h1 class="display-5 text-center">What Our Users Say</h1>
+    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+        <div *ngFor="let review of reviews; let i = index" class="carousel-item" [class.active]="i === 0">
+          <div class="card review-card p-3 shadow-sm">
+            <div class="quote-icon text-center">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="card-body ">
+                <div class="review-icon text-center">
+                    <i class="fas fa-quote-left"></i>
+                  </div>
+                  <h5 class="card-text text-center">{{ review.review }}</h5>
+              <p class="card-title text-center">{{ review.name }}</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button> -->
+    </div>
+  </div>
+  

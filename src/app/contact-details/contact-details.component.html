@@ -1,0 +1,106 @@
+<div class="container">
+  <div class="form-box col-md-10 mx-auto">
+      <h1>{{title}}!</h1>
+      <form [formGroup]="angForm" novalidate>
+          <div class="form-group">
+              <label>Name:</label>
+              <input class="form-control" formControlName="name" type="text">
+              <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
+                   class="alert alert-danger">
+                  <div *ngIf="angForm.controls['name'].errors">
+                      Name is required.
+                  </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label>Email:</label>
+              <input class="form-control" formControlName="email" type="email">
+              <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)"
+                   class="alert alert-danger">
+                  <div *ngIf="angForm.controls['email'].errors">
+                      A valid email is required.
+                  </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label>Question:</label>
+              <input class="form-control" formControlName="question" type="text">
+              <div *ngIf="angForm.controls['question'].invalid && (angForm.controls['question'].dirty || angForm.controls['question'].touched)"
+                   class="alert alert-danger">
+                  <div *ngIf="angForm.controls['question'].errors">
+                      Question is required.
+                  </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label>Comment:</label>
+              <textarea class="form-control" formControlName="comment"></textarea>
+              <div *ngIf="angForm.controls['comment'].invalid && (angForm.controls['comment'].dirty || angForm.controls['comment'].touched)"
+                   class="alert alert-danger">
+                  <div *ngIf="angForm.controls['comment'].errors">
+                      Comment is required.
+                  </div>
+              </div>
+          </div>
+          <button type="submit"
+                  [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+              Save
+          </button>
+      </form>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="container">
+  <div class="form-box col-md mx-auto">
+      <h1>{{title}}!</h1>
+      <form [formGroup]="angForm" novalidate>
+          <div class="form-group">
+              <label>Name:</label>
+              <input class="form-control" formControlName="name" type="text">
+              <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
+                   class="alert alert-danger">
+                  <div *ngIf="angForm.controls['name'].errors">
+                      Name is required.
+                  </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label>Email:</label>
+              <input class="form-control" formControlName="email" type="email">
+              <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)"
+                   class="alert alert-danger">
+                  <div *ngIf="angForm.controls['email'].errors">
+                      A valid email is required.
+                  </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label>Question:</label>
+              <input class="form-control" formControlName="question" type="text">
+              <div *ngIf="angForm.controls['question'].invalid && (angForm.controls['question'].dirty || angForm.controls['question'].touched)"
+                   class="alert alert-danger">
+                  <div *ngIf="angForm.controls['question'].errors">
+                      Question is required.
+                  </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label>Comment:</label>
+              <textarea class="form-control" formControlName="comment"></textarea>
+              <div *ngIf="angForm.controls['comment'].invalid && (angForm.controls['comment'].dirty || angForm.controls['comment'].touched)"
+                   class="alert alert-danger">
+                  <div *ngIf="angForm.controls['comment'].errors">
+                      Comment is required.
+                  </div>
+              </div>
+          </div>
+          <button type="submit"
+                  [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+              Save
+          </button>
+      </form>
+  </div>
+</div> -->

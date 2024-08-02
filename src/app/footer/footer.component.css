@@ -1,0 +1,25 @@
+footer {
+    bottom: 0;
+    /* background-color: beige; */
+  }
+
+.con{
+    background-color: beige;
+}
+
+.p{
+    align-items: center;
+}
+
+.btn{
+    background-color:rgb(78, 76, 170);
+}
+
+.logo{
+    max-height: 50px; /* Adjust the max height of the logo */
+    margin-right: 20px;
+}
+
+.pp{
+    text-align: center;
+}
